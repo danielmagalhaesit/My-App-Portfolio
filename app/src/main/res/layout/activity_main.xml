@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:gravity="center_horizontal|center_vertical"
+    tools:context="com.android.daniel.myappportfolio.MainActivity"
+    android:background="@color/primary_light"
+    android:weightSum="1">
+
+
+    <TextView
+        android:text="@string/mainLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:id="@+id/textView"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/main_text"
+        android:layout_margin="@dimen/margins"/>
+
+    <Button
+        android:text="@string/button_popular_movies"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnPopularMovies"
+        android:textSize="14sp"
+        android:layout_margin="@dimen/margins"
+        android:background="@drawable/background_button" />
+
+    <Button
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnStockHawk"
+        android:layout_margin="@dimen/margins"
+        android:text="@string/button_stock_hawk"
+        android:background="@drawable/background_button" />
+
+    <Button
+        android:text="@string/button_build_it_bigger"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnBuildItBigger"
+        android:layout_margin="@dimen/margins"
+        android:background="@drawable/background_button" />
+
+    <Button
+        android:text="@string/button_make_your_app_material"
+        android:layout_width="217dp"
+        android:layout_margin="@dimen/margins"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnMakeMaterial"
+        android:layout_weight="0.02"
+        android:background="@drawable/background_button" />
+
+    <Button
+        android:text="@string/button_go_ubiquitous"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnGoUbiquitous"
+        android:layout_margin="@dimen/margins"
+        android:background="@drawable/background_button" />
+
+    <Button
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCapstone"
+        android:text="@string/button_Capstone"
+        android:layout_margin="@dimen/margins"
+        android:background="@drawable/background_button" />
+
+
+</LinearLayout>
