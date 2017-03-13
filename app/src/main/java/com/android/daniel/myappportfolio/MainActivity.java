@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import java.text.Format;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -20,51 +22,24 @@ public class MainActivity extends AppCompatActivity {
         Button btnGoUbiquitous = (Button) findViewById(R.id.btnGoUbiquitous);
         Button btnCapstone = (Button) findViewById(R.id.btnCapstone);
 
-        btnPopularMovies.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                makeToast(getString(R.string.button_popular_movies));
-            }
-        });
+        makeToast(getString(R.string.button_popular_movies), btnPopularMovies);
+        makeToast(getString(R.string.button_stock_hawk), btnStockHawk);
+        makeToast(getString(R.string.button_build_it_bigger), btnBuildItBigger);
+        makeToast(getString(R.string.button_make_your_app_material), btnMakeMaterial);
+        makeToast(getString(R.string.button_go_ubiquitous), btnGoUbiquitous);
+        makeToast(getString(R.string.button_Capstone), btnCapstone);
 
-        btnStockHawk.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                makeToast(getString(R.string.button_stock_hawk));
-            }
-        });
-
-        btnBuildItBigger.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                makeToast(getString(R.string.button_build_it_bigger));
-            }
-        });
-
-        btnMakeMaterial.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                makeToast(getString(R.string.button_make_your_app_material));
-            }
-        });
-
-        btnGoUbiquitous.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                makeToast(getString(R.string.button_go_ubiquitous));
-            }
-        });
-
-        btnCapstone.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                makeToast(getString(R.string.button_Capstone));
-            }
-        });
     }
 
-    private void makeToast(String appName){
-        Toast.makeText(this, "This button will launch my " + appName  + " app!", Toast.LENGTH_SHORT).show();
+    private void makeToast(String appName , View view){
+        Button button = (Button) view;
+        final String message = String.format(getString(R.string.Toast_button), appName);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), message , Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
 
